@@ -1,19 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:columnCount="1"
+    android:gravity="center"
     tools:context=".MainActivity">
 
-    <TextView
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_gravity="center"
+        android:layout_margin="2dp"
+        android:backgroundTint="#CDDC39"
+        android:text="Botón 1" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ToggleButton
+        android:id="@+id/miToggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textOn="Pulsado"
+        android:textOff="No pulsado" />
+
+    <ImageButton
+        android:id="@+id/miImageButton"
+        android:layout_width="99dp"
+        android:layout_height="111dp"
+        android:layout_gravity="center"
+        android:src="@drawable/imagen2"
+        android:contentDescription="Botón de imagen"
+        android:scaleType="fitCenter" />
+
+    <TextView
+        android:id="@+id/texto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:text="Probando el text view"
+        android:textColor="#CDDC39"
+        android:textStyle="bold"
+        android:textSize="12sp" android:typeface="monospace" />
+
+</GridLayout>
