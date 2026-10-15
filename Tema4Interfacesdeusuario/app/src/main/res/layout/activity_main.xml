@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:columnCount="1"
     android:gravity="center"
+    android:padding="16dp"
     tools:context=".MainActivity">
 
     <Button
@@ -37,10 +38,20 @@
         android:id="@+id/texto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:text="Probando el text view"
-        android:textColor="#CDDC39"
-        android:textStyle="bold"
-        android:textSize="12sp" android:typeface="monospace" />
+        android:layout_gravity="center"
+        android:text="Mi texto" />
+
+    <AutoCompleteTextView
+        android:id="@+id/miTexto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:completionHint="Elige una opcion"
+        android:completionThreshold="4" />
+
+    <Spinner
+        android:id="@+id/miSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
 
 </GridLayout>
