@@ -9,6 +9,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.SeekBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.CheckBox;
@@ -59,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView, View view, int position, long id) {
                 System.out.println("Has seleccionado el valor: " + adapterView.getItemAtPosition(position));
             }
+
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
                 System.out.println("No has seleccionado nada");
@@ -99,10 +101,31 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        // Buscar el SeekBar y el TextView
+        SeekBar seekBar = findViewById(R.id.seekBar);
+        TextView textViewProgress = findViewById(R.id.textViewProgress);
+
+        // Listener para los cambios en el SeekBar
+        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                textViewProgress.setText("Valor: " + progress);
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+            }
+        });
     }
 
-    @Override
-    protected void onStart() {
+
+        @Override
+        protected void onStart() {
         super.onStart();
         TextView miTexto = findViewById(R.id.texto);
         miTexto.setText("Nuevo texto a mostrar");
