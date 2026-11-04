@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Bar Account</string>
+    <string name="titulo">Bar Account</string>
+    <string name="importe">Bill amount (€)</string>
+    <string name="propina">Include tip</string>
+    <string name="metodo_pago">Payment method</string>
+    <string name="efectivo">Cash</string>
+    <string name="tarjeta">Card</string>
+    <string name="calificar">Rate the service</string>
+    <string name="calcular">Calculate total</string>
+</resources>
